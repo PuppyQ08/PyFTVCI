@@ -1,0 +1,10 @@
+#!/bin/bash
+#$ -S /bin/bash     # use bash shell
+#$ -q all.q         # Queue jobs
+#$ -pe orte 16      # parallel environment: use 32 cores (16 per node)
+#$ -cwd             # execute from current working directory
+#$ -e vci_ZPE.stderr       # stderr file
+#$ -o vci_ZPE.stdout       # stdout file
+#$ -N vci_ZPE    # name of job
+
+python vci_lambda2.py
